@@ -43,7 +43,7 @@ Both generators and discriminators weights will be saved under the output direct
 
 If you don't own a GPU remove the --cuda option, although I advise you to get one!
 
-You can also view the training progress as well as live output images by running ```python3 -m visdom``` in another terminal and opening [http://localhost:8097/](http://localhost:8097/) in your favourite web browser. This should generate training loss progress as shown below:
+You can also view the training progress as well as live output images by running ```python3 -m visdom``` in another terminal and opening [http://localhost:8097/](http://localhost:8097/) in your favourite web browser. This should generate training loss progress as shown below (default params, horse2zebra dataset):
 
 ![Generator loss](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/loss_G.png)
 ![Discriminator loss](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/loss_D.png)
@@ -56,6 +56,13 @@ You can also view the training progress as well as live output images by running
 ./test --dataroot datasets/<dataset_name>/ --cuda
 ```
 This command will take the images under the *dataroot/test* directory, run them through the generators and save the output under the *output/A* and *output/B* directories. As with train, some parameters like the weights to load, can be tweaked, see ```./test --help``` for more information.
+
+Examples of the generated outputs (default params, horse2zebra dataset):
+
+![Real horse](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/real_A.png)
+![Fake zebra](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/fake_B.png)
+![Real zebra](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/real_B.png)
+![Fake horse](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/fake_A.png)
 
 ## License
 This project is licensed under the GPL v3 License - see the [LICENSE.md](LICENSE.md) file for details
