@@ -59,9 +59,9 @@ This command will take the images under the *dataroot/test* directory, run them 
 
 Examples of the generated outputs (default params, horse2zebra dataset):
 
-![Real horse](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/real_A.png)
+![Real horse](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/real_A.jpg)
 ![Fake zebra](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/fake_B.png)
-![Real zebra](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/real_B.png)
+![Real zebra](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/real_B.jpg)
 ![Fake horse](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/fake_A.png)
 
 ## License
