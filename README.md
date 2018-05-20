@@ -32,7 +32,7 @@ Alternatively you can build your own dataset by setting up the following directo
     |   |   └── test               # Testing
     |   |   |   ├── A              # Contains domain A images (i.e. Bruce Wayne)
     |   |   |   └── B              # Contains domain B images (i.e. Batman)
-    
+
 ### 2. Train!
 ```
 ./train --dataroot datasets/<dataset_name>/ --cuda
@@ -43,7 +43,7 @@ Both generators and discriminators weights will be saved under the output direct
 
 If you don't own a GPU remove the --cuda option, although I advise you to get one!
 
-You can also view the training progress as well as live output images by running ```python3 -m visdom``` in another terminal and opening [http://localhost:8097/](http://localhost:8097/) in your favourite web browser. This should generate training loss progress as shown below (default params, horse2zebra dataset):
+You can also view the training progress as well as live output images by running ```python3 -m visdom.server``` in another terminal and opening [http://localhost:8097/](http://localhost:8097/) in your favourite web browser. This should generate training loss progress as shown below (default params, horse2zebra dataset):
 
 ![Generator loss](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/loss_G.png)
 ![Discriminator loss](https://github.com/ai-tor/PyTorch-CycleGAN/raw/master/output/loss_D.png)
