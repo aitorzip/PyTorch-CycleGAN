@@ -72,8 +72,10 @@ lr_scheduler_D_B = torch.optim.lr_scheduler.LambdaLR(optimizer_D_B, lr_lambda=La
 Tensor = torch.cuda.FloatTensor if opt.cuda else torch.Tensor
 input_A = Tensor(opt.batchSize, opt.input_nc, opt.size, opt.size)
 input_B = Tensor(opt.batchSize, opt.output_nc, opt.size, opt.size)
-target_real = Variable(Tensor(opt.batchSize).fill_(1.0), requires_grad=False)
-target_fake = Variable(Tensor(opt.batchSize).fill_(0.0), requires_grad=False)
+# target_real = Variable(Tensor(opt.batchSize).fill_(1.0), requires_grad=False)
+# target_fake = Variable(Tensor(opt.batchSize).fill_(0.0), requires_grad=False)
+target_real = Variable(Tensor(opt.batchSize,1).fill_(1.0), requires_grad=False)
+target_fake = Variable(Tensor(opt.batchSize,1).fill_(0.0), requires_grad=False)
 
 fake_A_buffer = ReplayBuffer()
 fake_B_buffer = ReplayBuffer()
