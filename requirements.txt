@@ -1,0 +1,5 @@
+numpy==1.22.1
+Pillow==9.1.0
+torch==1.10.2
+torchvision==0.11.3
+visdom==0.1.8.9
