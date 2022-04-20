@@ -34,9 +34,19 @@ Alternatively you can build your own dataset by setting up the following directo
     |   |   |   └── B              # Contains domain B images (i.e. Batman)
     
 ### 2. Train!
+
+Before training, make sure to startup the visdom server in another terminal. Otherwise, you will get HTTPConnection errors. It's as simple as:
+
 ```
-./train --dataroot datasets/<dataset_name>/ --cuda
+visdom
 ```
+
+Next, you can launch the actual training script. If your python version is not located at `/usr/bin/python3` (e.g., if you are using conda), you can delete the first line of `./train`. 
+
+```
+python train.py --dataroot datasets/<dataset_name>/ --cuda
+```
+
 This command will start a training session using the images under the *dataroot/train* directory with the hyperparameters that showed best results according to CycleGAN authors. You are free to change those hyperparameters, see ```./train --help``` for a description of those.
 
 Both generators and discriminators weights will be saved under the output directory.
@@ -53,7 +63,7 @@ You can also view the training progress as well as live output images by running
 
 ## Testing
 ```
-./test --dataroot datasets/<dataset_name>/ --cuda
+python test.py --dataroot datasets/<dataset_name>/ --cuda
 ```
 This command will take the images under the *dataroot/test* directory, run them through the generators and save the output under the *output/A* and *output/B* directories. As with train, some parameters like the weights to load, can be tweaked, see ```./test --help``` for more information.
 
